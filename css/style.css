@@ -1326,16 +1326,8 @@ body {
     max-width: 650px;
   }
 
-  .lg\:max-w-\[600px\] {
-    max-width: 600px;
-  }
-
   .lg\:max-w-\[500px\] {
     max-width: 500px;
-  }
-
-  .lg\:max-w-\[615px\] {
-    max-width: 615px;
   }
 
   .lg\:rounded-none {
