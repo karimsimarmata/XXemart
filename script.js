@@ -19,6 +19,15 @@ hamburger.addEventListener("click", function () {
   navMenu.classList.toggle("hidden");
 });
 
+// window di click
+
+window.addEventListener("click", function (e) {
+  if (e.target != navMenu && e.target != hamburger) {
+    hamburger.classList.remove("hamburger-active");
+    navMenu.classList.add("hidden");
+  }
+});
+
 // link saat di klik
 $(".page-scroll").on("click", function (e) {
   var tujuan = $(this).attr("href");
@@ -27,9 +36,21 @@ $(".page-scroll").on("click", function (e) {
     {
       scrollTop: elementTujuan.offset().top - 120,
     },
-    1000,
-    "swing"
+    900
   );
 
   e.preventDefault;
+});
+
+// dark mode togggle
+
+const darkMode = document.querySelector("#dark-toggle");
+const html = document.querySelector("html");
+
+darkMode.addEventListener("click", function () {
+  if (darkMode.checked) {
+    html.classList.add("dark");
+  } else {
+    html.classList.remove("dark");
+  }
 });
